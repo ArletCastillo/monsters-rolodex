@@ -19,7 +19,7 @@ class App extends Component {
       return {monsters: users}
     },
     () => {
-      console.log(this.state);
+      //console.log(this.state);
     }
     ))
   }
@@ -27,6 +27,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <input className='search-box' type='search' placeholder='search monsters'
+               onChange={(event) => {
+                const searchString = event.target.value.toLocaleLowerCase().trim();
+                const filteredMonsters = this.state.monsters.filter((monster) => {
+                  return monster.name.toLocaleLowerCase().includes(searchString);
+                });
+                this.setState(() => {
+                  return { monsters: filteredMonsters }
+                });
+               }} />
         {this.state.monsters.map((monster) => {
           return <div key={monster.id}><h1>{monster.name}</h1></div>
         })}
