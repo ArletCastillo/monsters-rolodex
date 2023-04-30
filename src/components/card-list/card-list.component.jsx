@@ -5,9 +5,8 @@ import './card-list.styles.css';
 const CardList = ({ monsters }) => (
     <div className="card-list">
         {monsters.map((monster) => {
-            const {name, email, id} = monster;
             return(
-                <CardContent id={id} name={name} email={email} />
+                <CardContent key={monster.id} monster={monster} />
             )
         })}
     </div>
