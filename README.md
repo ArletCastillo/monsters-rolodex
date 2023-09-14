@@ -7,5 +7,4 @@ The images for the mosnters come from this [RoboHash](https://robohash.org/) ser
 ![image](https://github.com/ArletCastillo/monsters-rolodex/assets/35300561/2a73ef00-4c37-4372-8d19-bfaf89d1bb03)
 
 TO DO:
-* Use a css framework.
 * Make cards clickable.
